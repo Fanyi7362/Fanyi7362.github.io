@@ -1,0 +1,256 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --background-color: #fff;
+    --section-background: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.5rem;  /* Reduced padding */
+}
+
+.nav-content ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-content a:hover {
+    color: var(--secondary-color);
+}
+
+.hero {
+    padding: 4rem 2rem 2rem;
+    background-color: var(--section-background);
+    min-height: 300px; /* Ensure minimum height for the header */
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.profile-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--background-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin: 3rem 0;  /* Reduced margin */
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;  /* gray line under section titles */
+}
+
+.education-item, .experience-item {
+    margin-bottom: 1.5rem;
+}
+
+.degree, .role {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.duration {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+#publications.section {
+    margin: 2rem 0;  /* reduced from 3rem */
+}
+
+.publication {
+    background-color: var(--section-background);
+    padding: 1rem;  /* reduced from 1.5rem */
+    margin-bottom: 0.5rem;  /* reduced from 1.5rem */
+    border-radius: 4px;
+}
+
+/* Add bullet points to publication titles */
+.publication h3::before {
+    content: "•";
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+/* Reduce space within publication */
+.publication h3 {
+    display: flex;
+    align-items: baseline;
+}
+
+.authors {
+    color: #666;
+    margin: 0.3rem 0;  /* reduced from 0.5rem */
+}
+
+.venue {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 0.3rem;  /* reduced from 0.5rem */
+}
+
+.pub-links {
+    margin-top: 0.3rem;  /* reduced from 0.5rem */
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--section-background);
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .profile-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .profile-image {
+        padding-right: 0;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-links a {
+        margin: 0 0.75rem;
+    }
+
+    .hero {
+        padding: 4rem 1rem 2rem;
+    }
+}
